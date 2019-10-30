@@ -1,0 +1,150 @@
+Programmering  2 projekt:
+
+////////////////////////////////////////////////////////////////
+Xamarin weather  app
+https://www.youtube.com/watch?v=z9kLkiGUZrE
+
+api key:
+8bf43165ce1682c532b8d2a39f38a6f2
+7dbfbfd305a1f3ca9e78bd03fef0892c
+
+
+API call:
+api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}
+
+?lat={lat}&lon={lon}
+
+ sb.AppendFormat("?lat={0}&lon={1}&APPID={2}&units=metric",lat,lng,API_KEY);
+
+http://api.openweathermap.org/data/2.5/weather?q=Stockholm&APPID=7dbfbfd305a1f3ca9e78bd03fef0892c
+
+http://api.openweathermap.org/data/2.5/weather?q=Stockholm&APPID=8bf43165ce1682c532b8d2a39f38a6f2
+
+///
+http://samples.openweathermap.org/data/2.5/weather?lat=-37.323&lon=121..8943&appid=8bf43165ce1682c532b8d2a39f38a6f2
+http://api.openweathermap.org/data/2.5/weather?lat=37.323&lon=-121.8943&appid=8bf43165ce1682c532b8d2a39f38a6f2
+
+
+https://openweathermap.org/current
+https://jsoneditoronline.org/
+http://json2csharp.com/
+
+Package Manager Console Host Version 4.6.1.5019
+
+Type 'get-help NuGet' to see all available NuGet commands.
+
+PM> Update-Package -Reinstall
+
+
+Problem:
+no id in Resource:
+
+clear solution and rebuild
+
+picasso:
+used square.Picasso   
+
+
+////////////////////////////////////////////////////////////////
+
+calculatorAndroid 
+
+Unable to update/install NeGet packages
+Went into VS settings -> NuGet settings -> cleared the NuGet cache, closed Visual Studio, and then 
+I deleted all obj and bin folders and deleted the packages folder.
+
+Started with add nuGet Packages
+
+
+////////////////////////////////////////////////////////////////
+
+XamarinChattAppapp:
+
+Package Manager Console:
+
+Install-Package Xamarin.Firebase.Database -pre
+
+Install-Package Xamarin.Firebase.Database -Version 60.1142.1
+
+install-Package Firebase.Xamarin
+
+install-Package Xamarin.Firebase.Auth -pre
+
+https://material.io/icons/#ic_reply
+https://www.flaticon.com/
+
+https://docs.microsoft.com/en-us/xamarin/android/deploy-test/signing/keystore-signature?tabs=vswin
+
+Open C:\Program Files (x86)\Java\jdk1.8.0_161\bin\ 
+and emptysearch ar write cmd and the run the command under;
+keytool.exe -list -v -keystore "%LocalAppData%\Xamarin\Mono for Android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
+
+SHA1: 59:C2:A0:08:A0:75:E2:01:9A:20:59:D2:03:E0:32:D6:4F:8C:35:CB
+
+////////////////////////////////////////////////////////////////////
+Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+//////////////////////////////////////////////////////////
+radle instructions
+Alternatives:
+Unity
+C++
+The Google services plugin for Gradle loads the google-services.json file you just downloaded. Modify your build.gradle files to use the plugin.
+
+Project-level build.gradle (<project>/build.gradle):
+
+buildscript {
+  dependencies {
+    // Add this line
+    classpath 'com.google.gms:google-services:3.2.0'
+  }
+}
+App-level build.gradle (<project>/<app-module>/build.gradle):
+
+dependencies {
+  // Add this line
+  compile 'com.google.firebase:firebase-core:12.0.0'
+}
+...
+// Add to the bottom of the file
+apply plugin: 'com.google.gms.google-services'
+includes Analytics by default help_outline
+
+Finally, press "Sync now" in the bar that appears in the IDE:
+
+
+
+//////////////////
+Update-Package -Reinstall
+
+//////////////
+
+0
+down vote
+I was getting the same error while downloading Xamarin.Android.Support.Design library which is parent for lot more other libraries. Even after following the accepted answer I was getting same error followed by other random errors.
+
+I successfully resolved It by following under mentioned steps
+
+VS-2017
+
+-> tools
+
+-> options
+
+-> locate nuget package manager
+
+-> clear All nuget Caches
+
+-> close VS
+
+-> delete packages folder from you project directory
+
+-> delete .vs,bin and obj folder from project
+
+-> restart VS
+
+-> try updating/installing package to the latest api that is available in sdk manager
+/////
+install Xamarin.Forms
+
+///////
+https://stackoverflow.com/questions/43619421/xamarin-android-trying-to-install-xamarin-android-support-v7-appcompat-package
